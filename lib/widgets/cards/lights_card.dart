@@ -34,37 +34,46 @@ class _LightsCardState extends State<LightsCard> {
   Dialog buildLightsDialog(BuildContext context) {
     return new Dialog(
       child: new Container(
-        width: 300.0,
-        height: 285.0,
+        constraints: new BoxConstraints(maxWidth: 300.0, maxHeight: 285.0),
         child: Padding(
-          padding: EdgeInsets.all(Spacing.gutterMini),
+          padding: EdgeInsets.symmetric(vertical: Spacing.gutterMicro),
           child: new Column(
             children: <Widget>[
-              new Text(
-                'Toggle Room Lights',
-                style: Theme.of(context).textTheme.body2
+              new Padding(
+                padding: EdgeInsets.all(Spacing.gutterMicro),
+                child: new Text(
+                  'Toggle Room Lights',
+                  style: Theme.of(context).textTheme.body2
+                )
               ),
               new Divider(),
-              new ToggleSwitchRow(
-                title: 'Master Switch',
-                value: enabled,
-                onChanged: (value) => onToggleSwitch(value, HUE_GROUP_ALL),
-              ),
-              new ToggleSwitchRow(
-                title: 'Bedroom',
-                value: false,
-                onChanged: (value) => onToggleSwitch(value, HUE_GROUP_BEDROOM),
-              ),
-              new ToggleSwitchRow(
-                title: 'Living Room',
-                value: false,
-                onChanged: (value) => onToggleSwitch(value, HUE_GROUP_LIVING_ROOM),
+              new Padding(
+                padding: EdgeInsets.symmetric(horizontal: Spacing.gutterMini),
+                child: new Column (
+                  children: <Widget>[
+                    new ToggleSwitchRow(
+                      title: 'Master Switch',
+                      value: enabled,
+                      onChanged: (value) => onToggleSwitch(value, HUE_GROUP_ALL),
+                    ),
+                    new ToggleSwitchRow(
+                      title: 'Bedroom',
+                      value: false,
+                      onChanged: (value) => onToggleSwitch(value, HUE_GROUP_BEDROOM),
+                    ),
+                    new ToggleSwitchRow(
+                      title: 'Living Room',
+                      value: false,
+                      onChanged: (value) => onToggleSwitch(value, HUE_GROUP_LIVING_ROOM),
+                    )
+                  ]
+                )
               ),
               new Divider(),
               new Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: <Widget>[
-                  new OutlineButton(
+                  new FlatButton(
                     textColor: Colors.deepOrangeAccent,
                     child: new Text('Close'),
                     onPressed: () => Navigator.pop(context)
