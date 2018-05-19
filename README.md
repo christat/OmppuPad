@@ -52,6 +52,10 @@ This app is far from something deployable. Namely, many configuration elements a
 - [ ] Choose city for date and forecast (same as above)
 - [ ] No automagic discovery of Hue bridge and API Key
 
+## Credits
+
+Weather icons designed by Freepik from Flaticon.
+
 ## License
 
 MIT
