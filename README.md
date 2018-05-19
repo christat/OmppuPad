@@ -9,7 +9,7 @@ The main goal was to repurpose it and have an excuse to test drive [Flutter](htt
 
 Eventually, the project has expanded to become a smart home hub for personal use:
 
-![alt text](https://github.com/christat/OmppuPad/example/omppu_pad.png "Dashboard screenshot")
+![alt text](https://github.com/christat/OmppuPad/blob/master/example/omppu_pad.png "Dashboard screenshot")
 
 
 Overall, it's impressive how quick and easily one can build fairly elaborate apps with Flutter. :fireworks:
